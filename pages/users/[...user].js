@@ -8,7 +8,7 @@ function User({ user }) {
       <h3>UserName - {user.username}</h3>
       <h3>Email - {user.email}</h3>
       <Link href={{
-        pathname: `/posts`, query: { user: user.id }
+        pathname: `/posts`, query: { userId: user.id }
       }}><a>See Posts by this User</a></Link>
     </div>
   )

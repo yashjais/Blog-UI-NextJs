@@ -30,8 +30,8 @@ Posts.getInitialProps = async (context) => {
   // const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
   // const posts = res.data
   // console.log(posts)
-  if (context.query.user) {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users?user=${context.query.user}`)
+  if (context.query.userId) {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${context.query.userId}`)
     const posts = await res.json()
     console.log('posts', posts.length)
     return { posts }
