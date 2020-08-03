@@ -4,10 +4,12 @@ import Link from 'next/link'
 function User({ user }) {
   return (
     <div>
-      <h1>User - { user.name }</h1>
+      <h1>User - {user.name}</h1>
       <h3>UserName - {user.username}</h3>
       <h3>Email - {user.email}</h3>
-      <Link href={{ pathname: `/posts`, query: `user=${user.id}`}}><a>See Posts by this User</a></Link>
+      <Link href={{
+        pathname: `/posts`, query: { user: user.id }
+      }}><a>See Posts by this User</a></Link>
     </div>
   )
 }
